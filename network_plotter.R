@@ -6,8 +6,9 @@ library(RColorBrewer)
 library(classInt)
 library(gdata)
 library(stringr)
+library(igraph)
 
-load("./rdatas/g4_rtn.RData")
+load("./rdatas/g3_rtn.RData")
 
 tfs <- rtni@regulatoryElements
 tree <- tni.graph(rtni, tnet = "dpi", gtype = "amapDend")
@@ -44,7 +45,7 @@ calld(rdp)
 
 treeAndLeaf(rdp, gg)
 
-addLegend.color(rdp, colvec = c("#00107C", "#1CD2AF"), title = "",
+addLegend.color(rdp, colvec = c("#007D0A", "#CF7700"), title = "",
                 labvec = c("Master Regulator", "Regulon of Interest"), 
                 dxborder = 30, dyborder = 30, vertical = T,
                 position = "bottomright")
@@ -85,8 +86,9 @@ for(x in 1:10){
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
-selectNodes(rdp, interesse_regs)
 selectNodes(rdp, tna$Regulon)
+selectNodes(rdp, interesse_regs)
+
 
 
 #---- Size legend is necessary to read the amount of elements in regulon ----
