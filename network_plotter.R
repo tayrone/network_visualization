@@ -11,7 +11,8 @@ library(igraph)
 load("./rdatas/g3_rtn.RData")
 
 tfs <- rtni@regulatoryElements
-tree <- tni.graph(rtni, tnet = "dpi", gtype = "amapDend")
+tree <- tni.graph(rtni, tnet = "dpi", gtype = "rmap", 
+                  regulatoryElements = interesse_regs)
 tna <- tna.get(rtna, what = "mra")
 
 #---- Defining network MRs ----
