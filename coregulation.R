@@ -7,12 +7,12 @@ library(stringr)
 library(igraph)
 library(purrr)
 
-load("./rdatas/g3_rtn.RData")
+load("../rdatas/g3_rtn.RData")
 
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
-tree <- tni.graph(rtni, tnet = "dpi", gtype = "rmap", 
+tree <- tni.graph(rtni, tnet = "dpi", gtype = "amap", 
                   regulatoryElements = interesse_regs)
 
 
@@ -30,8 +30,7 @@ addGraph(rdp, tree)
 
 #---- Generate network for each pair of regulons, and then plot each one ----
 
-highly_connected <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
-                      "NACC2")
+highly_connected <- interesse_regs
 
 for(regulon1 in highly_connected){
   for(regulon2 in highly_connected){
@@ -43,6 +42,6 @@ for(regulon1 in highly_connected){
   }
 }
 
-addGraph(rdp, SOX2_ZNF365)
+addGraph(rdp, ZNF365_ZNF385B)
 
 
