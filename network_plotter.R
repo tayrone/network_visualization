@@ -8,7 +8,7 @@ library(gdata)
 library(stringr)
 library(igraph)
 
-load("../rdatas/g3_rtn.RData")
+load("../rdatas/shh_rtn.RData")
 
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
@@ -49,7 +49,7 @@ calld(rdp)
 
 treeAndLeaf(rdp, gg)
 
-addLegend.color(rdp, colvec = c("#007D0A", "#CF7700"), title = "",
+addLegend.color(rdp, colvec = c("#58139B", "#D80916"), title = "",
                 labvec = c("Master Regulator", "Regulon of Interest"), 
                 dxborder = 30, dyborder = 30, vertical = T,
                 position = "bottomright")
