@@ -7,12 +7,12 @@ library(stringr)
 library(igraph)
 library(purrr)
 
-load("../rdatas/g3_rtn.RData")
+load("../rdatas/g4_rtn.RData")
 
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
-tree <- tni.graph(rtni, tnet = "dpi", gtype = "amap", 
+tree <- tni.graph(rtni, tnet = "dpi", gtype = "rmap", 
                   regulatoryElements = interesse_regs)
 
 

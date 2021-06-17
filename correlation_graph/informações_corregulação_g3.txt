@@ -1,0 +1,60 @@
+regulons com poucas interações
+
+ZNF385B 
+	um TF azul com CAMTA1
+	um vermelho com LHX4
+
+LHX4
+	4 vermelhos, um azul com CAMTA1
+	um vermelho com KCNIP3
+	um vermelho com BHLHE41 (trio com CAMTA1)
+
+NR1D1
+	um vermelho e um azul com BHLHE41
+
+
+------
+
+BHLHE41
+
+	CAMTA1 - apenas vermelhos
+	KCNIP3 - apenas vermelhos
+	NACC2 - apenas vermelhos
+	RFX4 - apenas vermelhos
+	SOX2 - apenas vermelhos
+	ZNF365 - apenas vermelhos
+	
+
+CAMTA1
+
+	KCNIP3 - maioria (8) vermelha, minoria (2) azuis
+	SOX2 - apenas vermelhos
+	ZNF365 - apenas vermelhos
+
+
+KCNIP3
+
+	NACC2 - apenas vermelhos
+	RFX4 - apenas vermelhos
+	SOX2 - apenas vermelhos (2)
+	ZNF365 - maioria (muitos) vermelhos, minoria (3) azuis
+	
+
+NACC2
+
+	RFX4 - apenas vermelhos
+	SOX2 - apenas vermelhos
+	ZNF365 - apenas vermelhos
+
+RFX4
+
+	SOX2 - apenas vermelhos
+	ZNF365 - apenas vermelhos
+
+
+SOX2
+
+	ZNF365 - apenas vermelhos	
+
+
+
