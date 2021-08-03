@@ -14,7 +14,8 @@ interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2",
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
 tfs <- rtni@regulatoryElements
-tree <- tni.graph(rtni, tnet = "dpi", gtype = "amap", regulatoryElements = interesse_regs)
+tree <- tni.graph(rtni, tnet = "dpi", gtype = "amap", 
+                  regulatoryElements = interesse_regs, amapCutoff = 0)
 tna <- tna.get(rtna, what = "mra")
 
 #---- Defining network MRs ----
