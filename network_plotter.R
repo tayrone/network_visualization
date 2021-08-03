@@ -8,13 +8,13 @@ library(gdata)
 library(stringr)
 library(igraph)
 
-load("../rdatas/g4_rtn.RData")
+load("../rdatas/g3_rtn.RData")
 
 interesse_regs <- c("BHLHE41", "CAMTA1", "ZNF365", "KCNIP3", "RFX4", "SOX2", 
                     "NACC2", "ZNF385B", "NR1D1", "LHX4")
 
 tfs <- rtni@regulatoryElements
-tree <- tni.graph(rtni, tnet = "dpi", gtype = "amapDend")
+tree <- tni.graph(rtni, tnet = "dpi", gtype = "amap", regulatoryElements = interesse_regs)
 tna <- tna.get(rtna, what = "mra")
 
 #---- Defining network MRs ----
@@ -45,6 +45,8 @@ V(gg)$nodeAlias[str_detect(V(gg)$nodeAlias, "^N[0-9]+$")] <- ""
 rdp <- RedPort()
 
 calld(rdp)
+
+addGraph(rdp, tree)
 
 treeAndLeaf(rdp, gg)
 
